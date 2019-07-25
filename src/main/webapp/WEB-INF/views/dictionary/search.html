@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+   <div th:with="key=${key}">
+       <h1>Word: <span th:text="${key}"></span></h1>
+   </div>
+    <div th:with="result=${result}">
+        <h1 th:if="${result}== null">Mean : Not found</h1>
+        <h1 th:if="${result}!= null">Mean: <span th:text="${result}"></span></h1>
+    </div>
+</form>
+</body>
+</html>
